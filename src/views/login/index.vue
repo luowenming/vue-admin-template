@@ -18,6 +18,7 @@
           type="text"
           tabindex="1"
           autocomplete="on"
+          class="username"
         />
       </el-form-item>
 
@@ -30,6 +31,7 @@
             :key="passwordType"
             ref="password"
             v-model="loginForm.password"
+            class="password"
             :type="passwordType"
             placeholder="Password"
             name="password"
@@ -45,7 +47,7 @@
         </el-form-item>
       </el-tooltip>
 
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
+      <el-button :loading="loading" class="submit-btn" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
 
       <div style="position:relative">
         <div class="tips">
